@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Intro } from "./pages/intro";
 import { CaptainLogin } from "./pages/captainLogin";
