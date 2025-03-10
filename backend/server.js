@@ -23,7 +23,7 @@ const socketController = require('./controllers/socketController');
 
 connectDB();
 app.use(cors({
-    origin: "http://localhost:5173", // ✅ Set the allowed origin
+    origin: ["http://localhost:5173", "https://uber-riding-app.onrender.com"], // ✅ Set the allowed origins
     credentials: true
 }));
 
@@ -43,5 +43,5 @@ app.get('/', (req, res) => {
 socketController.socketConnection(io);
 
 server.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT} || 4000`);
+    console.log(`Server is running on port ${process.env.PORT || 4000}`);
 });

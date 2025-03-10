@@ -11,12 +11,15 @@ export const Wrapper = ({ locat }: { locat: any }) => {
 
   const checkToken = async (token: any) => {
     try {
-      const response = await fetch(`http://localhost:4000/${locat}/profile`, {
-        method: "GET",
-        headers: {
-          Authorization: `bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://uber-riding-app.onrender.com/${locat}/profile`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `bearer ${token}`,
+          },
+        }
+      );
       const data = await response.json();
       if (response.status === 200) {
         setUserData(data);

@@ -32,11 +32,14 @@ export const CaptainLogin = () => {
     if (!validateForm()) return; // Validate before proceeding
 
     try {
-      const response = await fetch("http://localhost:4000/captain/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://uber-riding-app.onrender.com/captain/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await response.json();
       if (response.status === 200) {
         localStorage.setItem("token", data.token);

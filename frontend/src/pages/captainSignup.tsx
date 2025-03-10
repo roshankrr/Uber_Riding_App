@@ -20,11 +20,14 @@ export const CaptainSignup = () => {
     // console.log("main ab chala hu", userData.fullName.firstName);
 
     try {
-      const response = await fetch("http://localhost:4000/captain/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(userData),
-      });
+      const response = await fetch(
+        "https://uber-riding-app.onrender.com/captain/register",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(userData),
+        }
+      );
       const data = await response.json();
       if (response.status === 201) {
         console.log(data.token);

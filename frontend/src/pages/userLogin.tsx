@@ -19,11 +19,14 @@ export const UserLogin = () => {
       return;
     }
     try {
-      const response = await fetch("http://localhost:4000/users/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://uber-riding-app.onrender.com/users/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await response.json();
       if (response.status === 200) {
         console.log(data.token);

@@ -29,18 +29,21 @@ export const Home = ({ userData }: any) => {
       return;
     }
     try {
-      const response = await fetch("http://localhost:4000/users/createride", {
-        method: "POST",
-        headers: {
-          Authorization: `bearer ${localStorage.getItem("token")}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          source: pickupPoint,
-          destination: destinationPoint,
-          vehicle_type,
-        }),
-      });
+      const response = await fetch(
+        "https://uber-riding-app.onrender.com/users/createride",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            source: pickupPoint,
+            destination: destinationPoint,
+            vehicle_type,
+          }),
+        }
+      );
       const data = await response.json();
       console.log("New ride created", data);
       socket.emit("rideRequested", data);
@@ -55,15 +58,18 @@ export const Home = ({ userData }: any) => {
     const timeLimit = 10 * 60 * 1000; // 10 minutes in milliseconds
 
     while (true) {
-      const response = await fetch("http://localhost:4000/users/getridedata", {
-        method: "POST",
-        headers: {
-          Authorization: `bearer ${localStorage.getItem("token")}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ data }),
-        cache: "no-store",
-      });
+      const response = await fetch(
+        "https://uber-riding-app.onrender.com/users/getridedata",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ data }),
+          cache: "no-store",
+        }
+      );
       const rideData = await response.json();
       console.log("Ride Data ", rideData.rides[0].ride_status);
 
@@ -94,16 +100,19 @@ export const Home = ({ userData }: any) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:4000/maps/getdistance", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          source: pickupPoint,
-          destination: destinationPoint,
-        }),
-      });
+      const response = await fetch(
+        "https://uber-riding-app.onrender.com/maps/getdistance",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            source: pickupPoint,
+            destination: destinationPoint,
+          }),
+        }
+      );
       const data = await response.json();
       setTravellingData(data);
     } catch (error) {

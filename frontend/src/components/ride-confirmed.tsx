@@ -15,7 +15,7 @@ const RideConf = ({ rideData }: { rideData: any }) => {
     const checkCaptain = async () => {
       try {
         const response = await fetch(
-          `http://localhost:4000/captain/getCaptainProfileById/${rideData.rides[0].captain_id}`,
+          `https://uber-riding-app.onrender.com/captain/getCaptainProfileById/${rideData.rides[0].captain_id}`,
           {
             method: "GET", // Changed to GET
             headers: {
