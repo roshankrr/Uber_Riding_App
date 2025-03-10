@@ -43,5 +43,5 @@ app.get('/', (req, res) => {
 socketController.socketConnection(io);
 
 server.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
+    console.log(`Server is running on port ${process.env.PORT} || 4000`);
 });
