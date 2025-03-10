@@ -1,11 +1,11 @@
-import { Shield, Share2, Phone, Star, Watch } from "lucide-react";
+import { Watch } from "lucide-react";
 import { useEffect, useState } from "react";
 import NewRide from "../components/newRideAvailable";
 import CaptainRideconfirm from "../components/captainRideconfirm";
 import socket from "../socket/socket";
 
 const CaptainHome = ({ userData }: any) => {
-  const [fullscreen, setFullscreen] = useState(false);
+  const [fullscreen] = useState(false);
   const [rideAccepted, setRideAccepted] = useState(false);
   const [newRideData, setNewRideData] = useState({});
   const [rideIgnored, setRideIgnored] = useState(false);
@@ -82,7 +82,6 @@ const CaptainHome = ({ userData }: any) => {
           <NewRide
             setRideIgnored={setRideIgnored}
             newRideData={newRideData}
-            rideAccepted={rideAccepted}
             setRideAccepted={setRideAccepted}
           />
         </div>

@@ -2,7 +2,7 @@ import { Shield, Share2, Phone, Star } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const RideConf = ({ rideData }: { rideData: any }) => {
-  const [fullscreen, setFullscreen] = useState(false);
+  const [fullscreen] = useState(false);
   const [captainData, setCaptainData] = useState({
     fullName: { firstName: "", lastName: "" },
     vehicle: { model: "", plate: "", vehicle_type: "", color: "" },

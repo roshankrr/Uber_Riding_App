@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Vehicle } from "../components/vehicle";
 import RideBookingCard from "../components/ride-booking-card";
 import { gsap } from "gsap";
@@ -6,7 +6,7 @@ import { io } from "socket.io-client";
 import { useNavigate } from "react-router-dom";
 const socket = io(import.meta.env.VITE_SERVER_URL); //this will connect the socket to our backen and we are connected to the server
 
-export const Home = ({ userData }: any) => {
+export const Home = ({}: any) => {
   const [fullscreen, setFullscreen] = useState(false);
   const [pickupPoint, setPickupPoint] = useState("Jaipur");
   const [destinationPoint, setDestinationPoint] = useState("");

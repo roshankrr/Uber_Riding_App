@@ -1,5 +1,5 @@
 import { MapPin, Wallet } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const CaptainRideconfirm = ({ newRideData, length = 6 }: any) => {
   const [otp, setOtp] = useState(new Array(length).fill(""));

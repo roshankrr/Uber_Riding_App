@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, use, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export const CaptainSignup = () => {

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { MapPin, CreditCard } from "lucide-react";
-import { gsap } from "gsap";
 
 const RideBookingCard = ({
   selectedVehicle,
@@ -8,7 +7,7 @@ const RideBookingCard = ({
   pickupPoint,
   destinationPoint,
 }: any) => {
-  const [status, setStatus] = useState("Looking for nearby drivers");
+  const [status] = useState("Looking for nearby drivers");
 
   const vehicleImages = {
     car: "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_538,w_956/v1645186360/assets/c8/6d4555-bd78-4dbc-a3d4-53d527f52f94/original/16x9-transportation-2.png",

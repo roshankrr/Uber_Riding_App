@@ -4,14 +4,12 @@ import { gsap } from "gsap";
 import socket from "../socket/socket";
 
 const NewRide = ({
-  rideAccepted,
   setRideAccepted,
   newRideData,
   setRideIgnored,
 }: {
   setRideIgnored: (value: boolean) => void;
   newRideData: any;
-  rideAccepted: boolean;
   setRideAccepted: (value: boolean) => void;
 }) => {
   const rideRef = useRef<HTMLDivElement>(null);

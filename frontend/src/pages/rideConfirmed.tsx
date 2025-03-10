@@ -1,4 +1,3 @@
-import React from "react";
 import RideConf from "../components/ride-confirmed";
 import { useLocation } from "react-router-dom";
 
