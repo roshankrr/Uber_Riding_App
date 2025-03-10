@@ -1,0 +1,14 @@
+# Start Generation Here
+# Node.js dependencies
+node_modules/
+# Build output
+dist/
+# Logs
+logs/
+*.log
+# Environment variables
+.env
+# OS generated files
+.DS_Store
+Thumbs.db
+# End Generation Here
