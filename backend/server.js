@@ -23,7 +23,7 @@ const socketController = require('./controllers/socketController');
 
 connectDB();
 app.use(cors({
-    origin: ["http://localhost:5173", "https://uber-riding-app.onrender.com"], // ✅ Set the allowed origins
+    origin: ["http://localhost:5173", "https://uber-riding-app.onrender.com","https://uberbyroshan.vercel.app/"], // ✅ Set the allowed origins
     credentials: true
 }));
 
