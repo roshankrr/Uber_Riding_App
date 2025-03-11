@@ -78,7 +78,7 @@ const CaptainHome = ({ userData }: any) => {
         </div>
       </div>
       {newRideData && Object.keys(newRideData).length > 0 && !rideIgnored && (
-        <div className="absolute h-full p-4 top-50 w-full">
+        <div className="absolute h-full p-4 left-0 top-50 w-full">
           <NewRide
             setRideIgnored={setRideIgnored}
             newRideData={newRideData}

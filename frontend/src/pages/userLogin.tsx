@@ -83,7 +83,7 @@ export const UserLogin = () => {
             >
               Login
             </button>
-            <div className="mt-72 w-full">
+            <div className="mt-40 w-full">
               <Link
                 to={"/captainLogin"}
                 className="bg-green-400 inline-block text-center font-bold text-black w-full p-3 rounded-lg"

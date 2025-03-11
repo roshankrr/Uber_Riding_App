@@ -40,7 +40,7 @@ const NewRide = ({
   return (
     <div
       ref={rideRef}
-      className="w-full max-w-sm mx-auto absolute p-4 bg-white rounded-2xl shadow-xl"
+      className="w-full max-w-sm mx-auto absolute p-4 left-0 bg-white rounded-2xl shadow-xl"
     >
       <h2 className="text-lg font-semibold mb-4">New Ride Available!</h2>
 

@@ -16,7 +16,7 @@ const RideBookingCard = ({
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg p-4">
+    <div className="w-full mx-auto bg-white rounded-xl shadow-lg p-4">
       <h2 className="text-lg font-semibold text-center">{status}</h2>
       <div className="flex justify-center my-4">
         <div className="p-4 animate-pulse rounded-full">

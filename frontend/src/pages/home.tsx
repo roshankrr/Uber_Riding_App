@@ -151,7 +151,7 @@ export const Home = ({}: any) => {
   }, [vehicle_type]);
 
   return (
-    <div className="md:w-60">
+    <div className="md:w-60 ">
       <div className="h-screen w-full md:w-60">
         <div className="logo font-bold text-4xl p-8">
           <h1>UBER</h1>
@@ -168,7 +168,7 @@ export const Home = ({}: any) => {
             fullscreen ? "h-screen" : "h-80"
           } w-full bg-white absolute bottom-0 p-4 duration-400 rounded-t-3xl`}
         >
-          <div className="flex flex-col items-center gap-4 justify-center">
+          <div className="flex flex-col bg-white items-center gap-4 justify-center">
             <hr
               onClick={() => {
                 setFullscreen(!fullscreen);

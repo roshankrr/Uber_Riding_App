@@ -30,6 +30,11 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use((req, res, next) => {
+    console.log("Incoming Request Origin:", req.headers.origin);
+    next();
+});
+
 
 app.use('/users', userRoute);
 app.use('/captain', captainRoute);
