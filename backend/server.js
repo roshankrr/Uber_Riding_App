@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app); // Create server
 const io = socketIo(server, {
     cors: {
-        origin: ["http://localhost:5173","https://uber-riding-app.onrender.com","https://uberbyroshan.vercel.app/"], // ✅ Set your frontend origin explicitly
+        origin: ["http://localhost:5173","https://uber-riding-app.onrender.com","https://uberbyroshan.vercel.app"], // ✅ Set your frontend origin explicitly
         methods: ["GET", "POST"],
         allowedHeaders: ["my-custom-header"],
         credentials: true
@@ -23,7 +23,7 @@ const socketController = require('./controllers/socketController');
 
 connectDB();
 app.use(cors({
-    origin: ["http://localhost:5173", "https://uber-riding-app.onrender.com","https://uberbyroshan.vercel.app/"], // ✅ Set the allowed origins
+    origin: ["http://localhost:5173", "https://uber-riding-app.onrender.com","https://uberbyroshan.vercel.app"], // ✅ Set the allowed origins
     credentials: true
 }));
 
